@@ -1,0 +1,162 @@
+/*================== ACHIEVENTS ====================== */
+.about_achievements{
+    margin-top: 3rem;
+}
+.about_achievements_container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.about_achievements_right > p{
+    margin: 1.8rem 0 2.5rem ;
+
+}
+.achievents_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.achievent_card{
+    background: rgb(239 79 106);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.achievent_card:hover{
+    background: transparent;
+    box-shadow: 0 3rem 3rem rgba(255, 255, 255, 0.1);
+
+}
+.achievents_icon{
+    background: var(--course-color);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.achievent_card p{
+    margin-top: 1rem;
+}
+
+
+/*================== TEAM STYLE ====================== */
+
+.team{
+    background: var(--course-color);
+    background: var(--color-bg);
+    box-shadow: inset 0 0 3rem rgba(255, 255, 255, 0.2);
+}
+.team_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.team_member {
+    background: var(--course-color);
+    padding: 1.2rem;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden; /*to adjust socials*/
+}
+.team_member:hover{
+    background: transparent;
+    border-color: var(--primary-color);
+}
+.team_member_image img {
+    filter: saturate(0);
+}
+.team_member:hover img{
+    filter: saturate(1);
+
+}
+.team_member_info * {
+     text-align: center;
+     margin-top: 1.4rem;
+}
+.team_member_socials {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* right: 0; */
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--salman-color-extra);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.4);
+    transition: var(--transition);
+
+}
+.team_member_socials a{
+    padding: 1rem;
+}
+.team_member:hover .team_member_socials{
+    right: 0;
+
+}
+
+/*================== MEDIA QUERY DESIGN ====================== */
+/*====================== FOR TABLET ====================== */
+
+@media screen and (max-width : 1024px) {
+    .about_achievements{
+        margin-top: 1.2rem;
+    }
+    .about_achievements_container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .about_achievements_left{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+    /*-----------team section--------*/
+
+    .team_container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.4rem;
+    }
+    .team_member{
+        padding: 1rem;
+    }
+
+}
+
+/*================== MEDIA QUERY DESIGN ====================== */
+/*====================== FOR PHONES ====================== */
+
+@media screen and (max-width : 600px) {
+    .achievents_cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .team_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .team_member{
+        padding: 0;
+        
+    }
+    .team_member p{
+        margin-bottom: 1.5rem;
+    }
+    img{
+        width: 100%;
+    }
+    
+    
+}
+
+
+
+
+
+
